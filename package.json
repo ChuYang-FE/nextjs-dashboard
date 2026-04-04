@@ -2,7 +2,10 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check": "biome check --write .",
     "dev": "next dev --turbopack",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
     "start": "next start"
   },
   "dependencies": {
@@ -23,6 +26,7 @@
     "zod": "^3.25.17"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.10",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
