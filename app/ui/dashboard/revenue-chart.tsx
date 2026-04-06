@@ -1,4 +1,5 @@
 import { CalendarIcon } from "@heroicons/react/24/outline";
+import { fetchRevenue } from "@/app/lib/data";
 import type { Revenue } from "@/app/lib/definitions";
 import { generateYAxis } from "@/app/lib/utils";
 import { lusitana } from "@/app/ui/fonts";
@@ -9,14 +10,10 @@ import { lusitana } from "@/app/ui/fonts";
 // https://www.chartjs.org/
 // https://airbnb.io/visx/
 
-export default async function RevenueChart({
-  revenue,
-}: {
-  revenue: Revenue[];
-}) {
+export default async function RevenueChart() {
+  const revenue = await fetchRevenue();
   const chartHeight = 350;
   // NOTE: Uncomment this code in Chapter 7
-
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
   if (!revenue || revenue.length === 0) {
