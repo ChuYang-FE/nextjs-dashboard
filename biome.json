@@ -30,6 +30,18 @@
       "trailingCommas": "all"
     }
   },
+  "overrides": [
+    {
+      "includes": ["types/postgres.d.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    }
+  ],
   "css": {
     "parser": {
       "tailwindDirectives": true
