@@ -4,6 +4,7 @@ import {
   DocumentDuplicateIcon,
   HomeIcon,
   UserGroupIcon,
+  ChartBarIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
@@ -17,6 +18,11 @@ const links = [
     name: "Invoices",
     href: "/dashboard/invoices",
     icon: DocumentDuplicateIcon,
+  },
+  {
+    name: "Stock Strategy",
+    href: "/dashboard/stock-strategy",
+    icon: ChartBarIcon,
   },
   { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
 ];
